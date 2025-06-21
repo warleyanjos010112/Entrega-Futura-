@@ -1,71 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ENTREGA FUTURA</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f9fa;
+      background-color: #eef2f5;
       color: #333;
     }
     header {
       background-color: #006400;
       color: white;
-      padding: 1.5rem;
+      padding: 2rem;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
     }
     .container {
-      padding: 2rem;
       max-width: 1200px;
-      margin: auto;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
     .cards {
       display: flex;
-      gap: 1.5rem;
       flex-wrap: wrap;
+      gap: 1.5rem;
       margin-bottom: 2rem;
     }
     .card {
       background: white;
+      border-left: 6px solid #4CAF50;
       padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
       flex: 1;
-      min-width: 200px;
-      text-align: center;
-      border-left: 5px solid #4CAF50;
+      min-width: 250px;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
     }
     .card h2 {
-      font-size: 1.1rem;
-      color: #444;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: #4CAF50;
     }
     .card p {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: bold;
-      color: #006400;
+      color: #222;
     }
-    h2 {
-      margin-top: 2rem;
-      color: #444;
+    h2.section-title {
+      margin-top: 3rem;
+      font-size: 1.4rem;
+      color: #333;
       border-bottom: 2px solid #4CAF50;
       padding-bottom: 0.5rem;
+    }
+    .resumo {
+      background-color: #fff;
+      border-left: 5px solid #006400;
+      padding: 1rem 1.5rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border-radius: 6px;
+      font-size: 1.1rem;
+    }
+    .resumo strong {
+      color: #006400;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 1rem;
       background: white;
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
     th, td {
       padding: 12px 15px;
       text-align: left;
-      border-bottom: 1px solid #ddd;
     }
     th {
       background-color: #4CAF50;
@@ -73,13 +95,21 @@
       text-align: center;
     }
     tr:nth-child(even) {
-      background-color: #f3f3f3;
+      background-color: #f9f9f9;
+    }
+    @media screen and (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+      }
+      th, td {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>ENTREGA FUTURA</h1>
+    <h1>📦 ENTREGA FUTURA</h1>
   </header>
   <div class="container">
     <div class="cards">
@@ -102,23 +132,25 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>29/08/2025</td><td>EQUILIBRIO FERTILIZANTES LTDA
-</td><td> R$ 388.790,00 
-</td></tr>
-            <tr><td>30/09/2025</td><td>FERTIGRAN FERTILIZANTES VALE DO RIO GRANDE LTDA
-</td><td> R$ 394.965,00 
-</td></tr>
-            <tr><td>30/09/2025</td><td>YARA BRASIL FERTILIZANTES S A
-</td><td> R$ 114.150,00 
-</td></tr>
-            <tr><td>20/09/2025</td><td>CLECIO KLEIN</td><td> R$ 400.894,50 
-</td></tr>
+            <tr><td>29/08/2025</td><td>EQUILIBRIO FERTILIZANTES LTDA</td><td>R$ 388.790,00</td></tr>
+            <tr><td>30/09/2025</td><td>FERTIGRAN FERTILIZANTES VALE DO RIO GRANDE LTDA</td><td>R$ 394.965,00</td></tr>
+            <tr><td>30/09/2025</td><td>YARA BRASIL FERTILIZANTES S A</td><td>R$ 114.150,00</td></tr>
+            <tr><td>20/09/2025</td><td>CLECIO KLEIN</td><td>R$ 400.894,50</td></tr>
           </tbody>
         </table>
       </div>
     </div>
 
-    <h2>Detalhes Compra</h2>
+    <h2 class="section-title">📥 Detalhes Compra</h2>
+
+    <div class="resumo">
+      <strong>EQUILIBRIO FERTILIZANTES LTDA</strong> — Total: <strong>R$ 176.000,00</strong>
+    </div>
+    <div class="resumo">
+      <strong>AMAGGI EXPORTACAO E IMPORTACAO LTDA
+      </strong> — Total: <strong>2.573,20</strong>
+    </div>
+
     <table>
       <thead>
         <tr>
@@ -129,21 +161,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>AMAGGI EXPORTACAO E IMPORTACAO LTDA</td><td>INSETICIDA SPERTO 5KG
-</td><td>R$ 2.573,20 
-</td><td>20</td></tr>
-        <tr><td>EQUILIBRIO FERTILIZANTES LTDA
-</td><td>FERTILIZANTE 05-35-00 + 10%S
-</td><td> R$ 118.800,00 
-</td><td>36</td></tr>
-        <tr><td>EQUILIBRIO FERTILIZANTES LTDA
-</td><td>FERTILIZANTE CLORETO DE POTÁSSIO 60% DE K20
-</td><td> R$ 57.200,00 
-</td><td>22</td></tr>
+        <tr><td>AMAGGI EXPORTACAO E IMPORTACAO LTDA</td><td>INSETICIDA SPERTO 5KG</td><td>R$ 2.573,20</td><td>20</td></tr>
+        <tr><td>EQUILIBRIO FERTILIZANTES LTDA</td><td>FERTILIZANTE 05-35-00 + 10%S</td><td>R$ 118.800,00</td><td>36</td></tr>
+        <tr><td>EQUILIBRIO FERTILIZANTES LTDA</td><td>FERTILIZANTE CLORETO DE POTÁSSIO 60% DE K20</td><td>R$ 57.200,00</td><td>22</td></tr>
       </tbody>
     </table>
 
-    <h2>Detalhes Venda</h2>
+    <h2 class="section-title">📤 Detalhes Venda</h2>
+     <div class="resumo">
+      <strong>EDISON CARLOS DE MENDONCA DOS REIS
+      </strong> — Total: <strong> R$ 179.520,00 </strong>
+    </div>
     <table>
       <thead>
         <tr>
@@ -154,18 +182,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>EDISON CARLOS DE MENDONCA DOS REIS
-</td><td>FERTILIZANTE 05-35-00 + 10%S                                                    
-</td><td> R$ 121.176,00 
-</td><td>36</td>
-        <tr><td>EDISON CARLOS DE MENDONCA DOS REIS
-</td><td>FERTILIZANTE CLORETO DE POTÁSSIO 60% DE K20
-</td><td> R$ 58.344,00 
-</td><td>22</td>
+        <tr><td>EDISON CARLOS DE MENDONCA DOS REIS</td><td>FERTILIZANTE 05-35-00 + 10%S</td><td>R$ 121.176,00</td><td>36</td></tr>
+        <tr><td>EDISON CARLOS DE MENDONCA DOS REIS</td><td>FERTILIZANTE CLORETO DE POTÁSSIO 60% DE K20</td><td>R$ 58.344,00</td><td>22</td></tr>
       </tbody>
     </table>
   </div>
 </body>
 </html>
-
-
