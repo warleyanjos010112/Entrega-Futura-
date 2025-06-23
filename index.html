@@ -5,98 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ENTREGA FUTURA</title>
   <style>
+    :root {
+      --verde-escuro: #006400;
+      --verde-claro: #4CAF50;
+      --cinza-claro: #f4f7fa;
+      --cinza-meio: #e0e0e0;
+      --branco: #ffffff;
+      --texto-primario: #333;
+      --texto-secundario: #555;
+      --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #eef2f5;
-      color: #333;
+      background-color: var(--cinza-claro);
+      color: var(--texto-primario);
     }
+
     header {
-      background-color: #006400;
-      color: white;
-      padding: 2rem;
+      background-color: var(--verde-escuro);
+      color: var(--branco);
+      padding: 2rem 1rem;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      box-shadow: var(--sombra);
     }
+
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
+
     .container {
       max-width: 1200px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
+
     .cards {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
       margin-bottom: 2rem;
+      justify-content: flex-start;
     }
+
     .card {
-      background: white;
-      border-left: 6px solid #4CAF50;
+      background: var(--branco);
+      border-left: 6px solid var(--verde-claro);
       padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      box-shadow: var(--sombra);
       flex: 1;
       min-width: 250px;
-      transition: transform 0.2s;
+      transition: transform 0.3s;
     }
+
+    .card-pequeno {
+      flex: 0 0 280px;
+      max-width: 280px;
+    }
+
     .card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
     }
+
     .card h2 {
+      font-size: 1.1rem;
+      color: var(--verde-claro);
       margin-bottom: 0.5rem;
-      font-size: 1rem;
-      color: #4CAF50;
     }
+
     .card p {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       font-weight: bold;
-      color: #222;
+      color: var(--texto-primario);
     }
+
     h2.section-title {
       margin-top: 3rem;
-      font-size: 1.4rem;
-      color: #333;
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 0.5rem;
+      font-size: 1.5rem;
+      color: var(--texto-primario);
+      border-bottom: 3px solid var(--verde-claro);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
     }
+
     .resumo {
-      background-color: #fff;
-      border-left: 5px solid #006400;
+      background-color: var(--branco);
+      border-left: 5px solid var(--verde-escuro);
       padding: 1rem 1.5rem;
-      margin-top: 1.5rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      border-radius: 6px;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: var(--sombra);
       font-size: 1.1rem;
     }
+
     .resumo strong {
-      color: #006400;
+      color: var(--verde-escuro);
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      background: white;
       margin-top: 1rem;
-      border-radius: 8px;
+      background: var(--branco);
+      border-radius: 10px;
+      box-shadow: var(--sombra);
       overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
+
     th, td {
-      padding: 12px 15px;
+      padding: 14px 18px;
       text-align: left;
     }
+
     th {
-      background-color: #4CAF50;
-      color: white;
+      background-color: var(--verde-claro);
+      color: var(--branco);
       text-align: center;
+      font-weight: 600;
     }
+
     tr:nth-child(even) {
-      background-color: #f9f9f9;
+      background-color: var(--cinza-meio);
     }
+
     @media screen and (max-width: 768px) {
       .cards {
         flex-direction: column;
@@ -104,6 +139,18 @@
       th, td {
         font-size: 0.9rem;
       }
+      .card-pequeno {
+        max-width: 100%;
+        flex: 1;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--verde-escuro);
+      color: white;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -111,18 +158,19 @@
   <header>
     <h1>📦 ENTREGA FUTURA</h1>
   </header>
+
   <div class="container">
     <div class="cards">
-      <div class="card">
-        <h2>Total a Receber</h2>
-        <p>R$ 178.573,20</p>
+      <div class="card card-pequeno">
+        <h2>💰 Total a Receber</h2>
+        <p>R$ 2.246.181,96</p>
+      </div>
+      <div class="card card-pequeno">
+        <h2>📤 Total a Pagar</h2>
+        <p>R$ 897.905,00</p>
       </div>
       <div class="card">
-        <h2>Total a Pagar</h2>
-        <p>R$ 179.520,00</p>
-      </div>
-      <div class="card">
-        <h2>Próximos Vencimentos</h2>
+        <h2>📅 Próximos Vencimentos</h2>
         <table>
           <thead>
             <tr>
@@ -132,24 +180,29 @@
             </tr>
           </thead>
           <tbody>
+            <tr style="background-color:#c8e6c9;">
+              <td colspan="3" style="text-align:center; font-weight:bold; color:#2e7d32;">💼 COMPRAS</td>
+            </tr>
             <tr><td>29/08/2025</td><td>EQUILIBRIO FERTILIZANTES LTDA</td><td>R$ 388.790,00</td></tr>
             <tr><td>30/09/2025</td><td>FERTIGRAN FERTILIZANTES VALE DO RIO GRANDE LTDA</td><td>R$ 394.965,00</td></tr>
             <tr><td>30/09/2025</td><td>YARA BRASIL FERTILIZANTES S A</td><td>R$ 114.150,00</td></tr>
+            <tr style="background-color:#bbdefb;">
+              <td colspan="3" style="text-align:center; font-weight:bold; color:#1565c0;">📦 VENDAS</td>
+            </tr>
+            <tr><td>20/09/2025</td><td>EDISON CARLOS</td><td>R$ 179.520,00</td></tr>
+            <tr><td>30/05/2025</td><td>DAGMAR KRUGER</td><td>R$ 985.088,36</td></tr>
+            <tr><td>30/05/2025</td><td>RENATO DALLASTA</td><td>R$ 168.276,00</td></tr>
+            <tr><td>20/08/2025</td><td>TORRES AGROPECUARIA LTDA</td><td>R$ 395.913,10</td></tr>
             <tr><td>20/09/2025</td><td>CLECIO KLEIN</td><td>R$ 400.894,50</td></tr>
+            <tr><td>20/09/2025</td><td>TORRES AGROPECUARIA</td><td>R$ 116.490,00</td></tr>
           </tbody>
         </table>
       </div>
     </div>
 
     <h2 class="section-title">📥 Detalhes Compra</h2>
-
-    <div class="resumo">
-      <strong>EQUILIBRIO FERTILIZANTES LTDA</strong> — Total: <strong>R$ 176.000,00</strong>
-    </div>
-    <div class="resumo">
-      <strong>AMAGGI EXPORTACAO E IMPORTACAO LTDA
-      </strong> — Total: <strong>2.573,20</strong>
-    </div>
+    <div class="resumo"><strong>EQUILIBRIO FERTILIZANTES LTDA</strong> — Total: <strong>R$ 176.000,00</strong></div>
+    <div class="resumo"><strong>AMAGGI EXPORTACAO E IMPORTACAO LTDA</strong> — Total: <strong>R$ 2.573,20</strong></div>
 
     <table>
       <thead>
@@ -168,10 +221,8 @@
     </table>
 
     <h2 class="section-title">📤 Detalhes Venda</h2>
-     <div class="resumo">
-      <strong>EDISON CARLOS DE MENDONCA DOS REIS
-      </strong> — Total: <strong> R$ 179.520,00 </strong>
-    </div>
+    <div class="resumo"><strong>EDISON CARLOS DE MENDONCA DOS REIS</strong> — Total: <strong>R$ 179.520,00</strong></div>
+
     <table>
       <thead>
         <tr>
@@ -187,5 +238,10 @@
       </tbody>
     </table>
   </div>
+
+  <footer>
+    &copy; 2025 Entrega Futura | Sistema de Gestão de Insumos Agrícolas 
+  </footer>
 </body>
 </html>
+
