@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ENTREGA FUTURA</title>
+  <style>
+    :root {
+      --verde-escuro: #006400;
+      --verde-claro: #4CAF50;
+      --cinza-claro: #f4f7fa;
+      --cinza-meio: #e0e0e0;
+      --branco: #ffffff;
+      --texto-primario: #333;
+      --texto-secundario: #555;
+      --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--cinza-claro);
+      color: var(--texto-primario);
+    }
+
+    header {
+      background-color: var(--verde-escuro);
+      color: var(--branco);
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: var(--sombra);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      justify-content: flex-start;
+    }
+
+    .card {
+      background: var(--branco);
+      border-left: 6px solid var(--verde-claro);
+      padding: 1.2rem;
+      border-radius: 12px;
+      box-shadow: var(--sombra);
+      flex: 1;
+      min-width: 250px;
+      transition: transform 0.3s;
+    }
+
+    .card-pequeno {
+      flex: 0 0 200px;
+      max-width: 200px;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      color: var(--verde-claro);
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--texto-primario);
+    }
+
+    .tabelas-lado-a-lado {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .tabela-box {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .tabela-compras {
+      border-left: 5px solid #2e7d32;
+    }
+
+    .tabela-vendas {
+      border-left: 5px solid #1565c0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: var(--branco);
+      border-radius: 10px;
+      box-shadow: var(--sombra);
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 18px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--verde-claro);
+      color: var(--branco);
+      text-align: center;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--cinza-meio);
+    }
+
+    h2.section-title {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      color: var(--texto-primario);
+      border-bottom: 3px solid var(--verde-claro);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .resumo {
+      background-color: var(--branco);
+      border-left: 5px solid var(--verde-escuro);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: var(--sombra);
+      font-size: 1.1rem;
+    }
+
+    .resumo strong {
+      color: var(--verde-escuro);
+    }
+
+    @media screen and (max-width: 768px) {
+      .cards, .tabelas-lado-a-lado {
+        flex-direction: column;
+      }
+
+      th, td {
+        font-size: 0.9rem;
+      }
+
+      .card-pequeno {
+        max-width: 100%;
+        flex: 1;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--verde-escuro);
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📦 ENTREGA FUTURA</h1>
+  </header>
+
+  <div class="container">
+    <div class="cards">
+      <div class="card card-pequeno">
+        <h2>💰 Total a Receber</h2>
+        <p>R$ 2.246.181,96</p>
+      </div>
+      <div class="card card-pequeno">
+        <h2>📤 Total a Pagar</h2>
+        <p>R$ 897.905,00</p>
+      </div>
+    </div>
+
+    <div class="tabelas-lado-a-lado">
+      <div class="tabela-box">
+        <h2>💼 Próximos Vencimentos - Compras</h2>
+        <table class="tabela-compras">
+          <thead>
+            <tr>
+              <th>Vencimento</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>29/08/2025</td><td>EQUILIBRIO FERTILIZANTES LTDA</td><td>R$ 388.790,00</td></tr>
+            <tr><td>30/09/2025</td><td>FERTIGRAN FERTILIZANTES VALE DO RIO GRANDE LTDA</td><td>R$ 394.965,00</td></tr>
+            <tr><td>30/09/2025</td><td>YARA BRASIL FERTILIZANTES S A</td><td>R$ 114.150,00</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tabela-box">
+        <h2>📦 Próximos Vencimentos - Vendas</h2>
+        <table class="tabela-vendas">
+          <thead>
+            <tr>
+              <th>Vencimento</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>20/09/2025</td><td>EDISON CARLOS</td><td>R$ 179.520,00</td></tr>
+            <tr><td>30/05/2025</td><td>DAGMAR KRUGER</td><td>R$ 985.088,36</td></tr>
+            <tr><td>30/05/2025</td><td>RENATO DALLASTA</td><td>R$ 168.276,00</td></tr>
+            <tr><td>20/08/2025</td><td>TORRES AGROPECUARIA LTDA</td><td>R$ 395.913,10</td></tr>
+            <tr><td>20/09/2025</td><td>CLECIO KLEIN</td><td>R$ 400.894,50</td></tr>
+            <tr><td>20/09/2025</td><td>TORRES AGROPECUARIA</td><td>R$ 116.490,00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2 class="section-title">📥 Detalhes Compra</h2>
+    <div class="resumo"><strong>EQUILIBRIO FERTILIZANTES LTDA</strong> — Total: <strong>R$ 176.000,00</strong></div>
+    <div class="resumo"><strong>AMAGGI EXPORTACAO E IMPORTACAO LTDA</strong> — Total: <strong>R$ 2.573,20</strong></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Produto</th>
+          <th>Valor</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>AMAGGI EXPORTACAO E IMPORTACAO LTDA</td><td>INSETICIDA SPERTO 5KG</td><td>R$ 2.573,20</td><td>20</td></tr>
+        <tr><td>EQUILIBRIO FERTILIZANTES LTDA</td><td>FERTILIZANTE 05-35-00 + 10%S</td><td>R$ 118.800,00</td><td>36</td></tr>
+        <tr><td>EQUILIBRIO FERTILIZANTES LTDA</td><td>FERTILIZANTE CLORETO DE POTÁSSIO 60% DE K20</td><td>R$ 57.200,00</td><td>22</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">📤 Detalhes Venda</h2>
+    <div class="resumo"><strong>EDISON CARLOS DE MENDONCA DOS REIS</strong> — Total: <strong>R$ 179.520,00</strong></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Produto</th>
+          <th>Valor</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>EDISON CARLOS DE MENDONCA DOS REIS</td><td>FERTILIZANTE 05-35-00 + 10%S</td><td>R$ 121.176,00</td><td>36</td></tr>
+        <tr><td>EDISON CARLOS DE MENDONCA DOS REIS</td><td>FERTILIZANTE CLORETO DE POTÁSSIO 60% DE K20</td><td>R$ 58.344,00</td><td>22</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    &copy; 2025 Entrega Futura | Sistema de Gestão de Insumos Agrícolas 
+  </footer>
+</body>
+</html>
+
